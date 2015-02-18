@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             files: {
                 'assets/js/kitgeo.min.js': [
                     'src/lib/jquery/dist/jquery.js',
-                    'src/lib/bootstrap/dist/bootstrap.js'
+                    'src/lib/bootstrap/dist/js/bootstrap.js'
                 ]
             }
         }

@@ -1,4 +1,5 @@
 // Core variables and mixins
+@import "font.less";
 @import "variables.less";
 @import "../lib/bootstrap/less/mixins.less";
 
@@ -48,3 +49,20 @@
 // Utility classes
 @import "../lib/bootstrap/less/utilities.less";
 @import "../lib/bootstrap/less/responsive-utilities.less";
+
+
+
+.content {
+    padding: @navbar-height + 10px 0 0;
+}
+
+.navbar-brand img {
+    margin-top: -10px;
+    vertical-align: middle;
+}
+
+.navbar-brand span {
+    position: relative;
+    top: -2px;
+    margin: 0 0 0 10px;
+}

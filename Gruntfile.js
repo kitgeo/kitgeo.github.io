@@ -24,6 +24,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'copy',
         'css',
         'js',
         'jekyll'
