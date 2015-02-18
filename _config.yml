@@ -1,0 +1,20 @@
+auto: true
+include: [
+  'assets'
+]
+exclude: [
+  'build',
+  'grunt',
+  'node_modules',
+  'src',
+  'bower.json',
+  'Gruntfile.js',
+  'package.json',
+  'README.md'
+]
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

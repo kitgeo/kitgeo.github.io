@@ -18,7 +18,11 @@
 
         sudo npm install -g grunt-cli
 
-5. Клонировать репозиторий:
+5. Установить глобально менеджер пакетов Bower через NPM:
+
+        sudo npm install -g bower
+
+6. Клонировать репозиторий:
 
         git clone git@github.com:kitgeo/kitgeo.github.io /path/to/kitgeo
 
@@ -26,12 +30,16 @@
 
         git clone https://github.com/kitgeo/kitgeo.github.io /path/to/kitgeo
 
-6. Из корневой директории репозитория установить локально пакеты, требуемые для разработки сайта:
+7. Из корневой директории репозитория установить локально пакеты, требуемые для разработки сайта:
 
         cd /path/to/kitgeo
         npm install
 
     В результате появится директоия `node_modules`.
+
+8. Установить библиотеки, требуемые для работы сайта, через Bower:
+
+        bower install
 
 ## Сборка сайта
 
