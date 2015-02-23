@@ -19,6 +19,7 @@
     "bootstrap": "~3.2.0",
     "jquery": "~2.1.1",
     "lodash": "~2.4.1",
-    "lightbox": "~2.7.1"
+    "lightbox": "~2.7.1",
+    "jquery.stellar": "~0.6.2"
   }
 }

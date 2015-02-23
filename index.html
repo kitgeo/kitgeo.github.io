@@ -2,6 +2,36 @@
 layout: default
 ---
 
+<div class="start">
+    <div class="picture" data-stellar-ratio="0.5"></div>
+    <div class="slogan">
+        <div class="background">
+            {% include start-picture.html %}
+        </div>
+        <div class="content">
+            {% include start-picture.html %}
+        </div>
+    </div>
+</div>
+
 <div class="container">
-    <p>Kitgeo site will live here...</p>
+    <div id="services" class="gap text-center">
+        <h2>Услуги</h2>
+        {% capture services %}{% include services.md %}{% endcapture %}
+        {{ services | markdownify }}
+        <div class="row gap">
+            <div class="col-sm-4">
+                {% capture services1 %}{% include services-1.md %}{% endcapture %}
+                {{ services1 | markdownify }}
+            </div>
+            <div class="col-sm-4">
+                {% capture services2 %}{% include services-2.md %}{% endcapture %}
+                {{ services2 | markdownify }}
+            </div>
+            <div class="col-sm-4">
+                {% capture services3 %}{% include services-3.md %}{% endcapture %}
+                {{ services3 | markdownify }}
+            </div>
+        </div>
+    </div>
 </div>

@@ -5,9 +5,11 @@ module.exports = function(grunt) {
     return {
         minified: {
             files: {
-                'assets/js/kitgeo.min.js': [
+                'assets/js/kitgeo.index.min.js': [
                     'src/lib/jquery/dist/jquery.js',
-                    'src/lib/bootstrap/dist/js/bootstrap.js'
+                    'src/lib/jquery.stellar/src/jquery.stellar.js',
+                    'src/lib/bootstrap/dist/js/bootstrap.js',
+                    'src/js/index.js'
                 ]
             }
         }
