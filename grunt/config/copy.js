@@ -7,6 +7,12 @@ module.exports = function(grunt) {
             src: '**',
             dest: 'assets/fonts'
         },
+        twbsfonts: {
+            expand: true,
+            cwd: 'src/lib/bootstrap/fonts',
+            src: '**',
+            dest: 'assets/fonts'
+        },
         images: {
             expand: true,
             cwd: 'src/img',
