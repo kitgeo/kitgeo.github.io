@@ -3,14 +3,18 @@ layout: default
 ---
 
 <div class="start">
-    <div class="picture" data-stellar-ratio="0.5"></div>
-    <div class="slogan">
+    <div class="picture hidden-xs" data-stellar-ratio="0.5"></div>
+    <div class="slogan hidden-xs">
         <div class="background">
             {% include start-picture.html %}
         </div>
         <div class="content">
             {% include start-picture.html %}
         </div>
+    </div>
+
+    <div class="mobile-slogan hidden-sm hidden-md hidden-lg">
+        {% include start-picture.html %}
     </div>
 </div>
 

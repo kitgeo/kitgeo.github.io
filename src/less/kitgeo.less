@@ -92,8 +92,8 @@ body {
         position: absolute;
         top: 0;
         bottom: -20%;
-        left: -10%;
-        right: -10%;
+        left: -40%;
+        right: -40%;
         background: url('../img/start-picture.jpg') no-repeat;
         background-size: cover;
         z-index: 499;
@@ -105,7 +105,6 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-
 
         .text-center;
 
@@ -120,14 +119,6 @@ body {
             color: #fff;
             text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.75);
             z-index: 501;
-
-            /*
-            @media screen and (max-width: @screen-sm-min) {
-                h1, h2, h3, h4, h5, h6 {
-                    font-size: 0.7em;
-                }
-            }
-            */
         }
 
         .background,
@@ -137,6 +128,45 @@ body {
             top: 20%;
             left: 0;
             right: 0;
+        }
+    }
+
+    .mobile-slogan {
+        position: absolute;
+        top: @navbar-height;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10% 10% 0;
+        .text-center;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0.2, 0.75);
+        overflow: hidden;
+        color: #fff;
+        #gradient > .vertical(@start-color: #00b, @end-color: #003);
+        z-index: 500;
+
+        h1 {
+            font-size: @font-size-h1 * 0.7;
+        }
+
+        h2 {
+            font-size: @font-size-h2 * 0.7;
+        }
+
+        h3 {
+            font-size: @font-size-h3 * 0.7;
+        }
+
+        h4 {
+            font-size: @font-size-h4 * 0.7;
+        }
+
+        h5 {
+            font-size: @font-size-h5 * 0.7;
+        }
+
+        h6 {
+            font-size: @font-size-h6 * 0.7;
         }
     }
 }
