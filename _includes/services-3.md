@@ -1,4 +1,4 @@
-![](assets/img/services-implementation.png)
+![Внедрение](assets/img/services-introduction.png)
 
 #### Внедрение
 

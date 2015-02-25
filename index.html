@@ -90,3 +90,21 @@ layout: default
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<div class="container">
+    <div id="company" class="gap text-center">
+        <h2>О компании</h2>
+        {% capture company %}{% include company.md %}{% endcapture %}
+        {{ company | markdownify }}
+        <div class="row gap">
+            <div class="col-md-6">
+                {% capture company1 %}{% include company-1.md %}{% endcapture %}
+                {{ company1 | markdownify }}
+            </div>
+            <div class="col-md-6">
+                {% capture company2 %}{% include company-2.md %}{% endcapture %}
+                {{ company2 | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>

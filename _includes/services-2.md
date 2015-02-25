@@ -1,4 +1,4 @@
-![](assets/img/services-development.png)
+![Разработка](assets/img/services-development.png)
 
 #### Разработка
 

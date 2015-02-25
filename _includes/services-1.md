@@ -1,4 +1,4 @@
-![](assets/img/services-consulting.png)
+![Консалтинг](assets/img/services-consulting.png)
 
 #### Консалтинг
 
