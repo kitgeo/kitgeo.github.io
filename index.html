@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="start">
+<div id="start" class="start">
     <div class="picture hidden-xs" data-stellar-ratio="0.5"></div>
     <div class="slogan hidden-xs">
         <div class="background">
@@ -18,12 +18,16 @@ layout: default
     </div>
 </div>
 
-<div class="container">
-    <div id="services" class="gap text-center">
+<div id="services">
+    <div class="container">
         <h2>Услуги</h2>
-        {% capture services %}{% include services.md %}{% endcapture %}
-        {{ services | markdownify }}
         <div class="row gap">
+            <div class="col-md-12">
+                {% capture services %}{% include services.md %}{% endcapture %}
+                {{ services | markdownify }}
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4">
                 {% capture services1 %}{% include services-1.md %}{% endcapture %}
                 {{ services1 | markdownify }}
@@ -91,12 +95,16 @@ layout: default
     </a>
 </div>
 
-<div class="container">
-    <div id="company" class="gap text-center">
+<div id="company">
+    <div class="container">
         <h2>О компании</h2>
-        {% capture company %}{% include company.md %}{% endcapture %}
-        {{ company | markdownify }}
         <div class="row gap">
+            <div class="col-md-12">
+                {% capture company %}{% include company.md %}{% endcapture %}
+                {{ company | markdownify }}
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 {% capture company1 %}{% include company-1.md %}{% endcapture %}
                 {{ company1 | markdownify }}
@@ -106,5 +114,54 @@ layout: default
                 {{ company2 | markdownify }}
             </div>
         </div>
+    </div>
+</div>
+
+<div id="contacts">
+    <div class="picture hidden-xs" data-stellar-ratio="0.5" data-stellar-vertical-offset="-960"></div>
+
+    <div class="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Обратная связь</h2>
+                    <form class="feedback-form">
+                        <div class="form-group">
+                            <label for="feedback-name">Имя</label>
+                            <input id="feedback-name" class="form-control" type="text" placeholder="Введите Ваше имя" />
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-email">Электронная почта</label>
+                            <input id="feedback-email" class="form-control" type="text" placeholder="Введите адрес Вашей электронной почты" />
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-phone">Телефон</label>
+                            <input id="feedback-phone" class="form-control" type="text" placeholder="Введите номер Вашего телефона" />
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-message">Сообщение</label>
+                            <textarea id="feedback-message" class="form-control" placeholder="Введите Ваше сообщение" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Отправить</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2>Контакты</h2>
+                    {% capture contacts %}{% include contacts.md %}{% endcapture %}
+                    {{ contacts | markdownify }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="counters">
+    <div class="container">
+        <div class="gap">
+            <a href="http://incube-ane.ru/">
+                <img src="assets/img/incube-logo.jpg" alt="" />
+            </a>
+        </div>
+        <p>&copy 2015 КИТГЕО. Все права защищены.</p>
     </div>
 </div>

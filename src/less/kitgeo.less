@@ -82,7 +82,7 @@ body {
     margin: 65px 0;
 }
 
-.start {
+#start {
     position: relative;
     width: 100%;
     height: 100%;
@@ -171,13 +171,72 @@ body {
     }
 }
 
-.carousel-caption {
-    visibility: hidden;
+#services {
+    .text-center;
+    .gap;
 }
 
-@media screen and (min-width: @screen-xs-min) {
+#maps-online {
+    .gap;
+
     .carousel-caption {
-        padding-bottom: 50px;
-        visibility: visible;
+        visibility: hidden;
     }
+
+    @media screen and (min-width: @screen-xs-min) {
+        .carousel-caption {
+            padding-bottom: 50px;
+            visibility: visible;
+        }
+    }
+}
+
+#company {
+    .text-center;
+    .gap;
+}
+
+#contacts {
+    .text-center;
+    .gap;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+
+    .picture {
+        position: absolute;
+        width: 100%;
+        height: 150%;
+        background: url('../img/contacts-bg.jpg') center top no-repeat;
+        .opacity(.85);
+        z-index: 499;
+    }
+
+    .contacts {
+        .gap;
+        position: relative;
+        z-index: 500;
+
+        h1, h2, h3, h4, h5, h6, p, label {
+            color: @text-color;
+        }
+
+        @media screen and (min-width: @screen-sm-min) {
+            h1, h2, h3, h4, h5, h6, p, label {
+                color: #fff;
+            }
+        }
+
+        .feedback-form {
+            width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+    }
+}
+
+#counters {
+    .text-center;
+    .gap;
 }
