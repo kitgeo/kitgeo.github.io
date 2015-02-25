@@ -103,44 +103,6 @@ body {
         left: 0;
         right: 0;
 
-        .text-center;
-
-        .background {
-            color: transparent;
-            background: #00c;
-            .opacity(0.1);
-            z-index: 500;
-        }
-
-        .content {
-            color: #fff;
-            text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.75);
-            z-index: 501;
-        }
-
-        .background,
-        .content {
-            padding: 40px 30px;
-            position: absolute;
-            top: 20%;
-            left: 0;
-            right: 0;
-        }
-    }
-
-    .mobile-slogan {
-        position: absolute;
-        top: @navbar-height;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 10% 10% 0;
-        .text-center;
-        text-shadow: 0px 2px 3px rgba(0, 0, 0.2, 0.75);
-        overflow: hidden;
-        color: #fff;
-        #gradient > .vertical(@start-color: #00b, @end-color: #003);
-        z-index: 500;
 
         h1 {
             font-size: @font-size-h1 * 0.7;
@@ -164,6 +126,65 @@ body {
 
         h6 {
             font-size: @font-size-h6 * 0.7;
+        }
+
+        @media screen and (min-width: @screen-sm-min) {
+            h1 {
+                font-size: @font-size-h1;
+            }
+
+            h2 {
+                font-size: @font-size-h2;
+            }
+
+            h3 {
+                font-size: @font-size-h3;
+            }
+
+            h4 {
+                font-size: @font-size-h4;
+            }
+
+            h5 {
+                font-size: @font-size-h5;
+            }
+
+            h6 {
+                font-size: @font-size-h6;
+            }
+        }
+
+
+        .text-center;
+
+        .background {
+            color: transparent;
+            background: #00c;
+            .opacity(0.1);
+            z-index: 500;
+        }
+
+        .content {
+            color: #fff;
+            text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.75);
+            z-index: 501;
+        }
+
+        .background,
+        .content {
+            padding: 30px 20px;
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+        }
+
+        @media screen and (min-width: @screen-sm-min) {
+            .background,
+            .content {
+                padding: 40px 30px;
+                top: 20%;
+            }
         }
     }
 }
