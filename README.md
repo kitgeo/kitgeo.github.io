@@ -10,15 +10,15 @@
 
         sudo gem install jekyll
 
-3. Установить [Node.js](http://nodejs.com) и [NPM](http://npmjs.com):
+3. Установить [Node.js](http://nodejs.org) и [NPM](http://npmjs.com):
 
         sudo apt-get install nodejs npm
 
-4. Установить глобально командный интерфейс Grunt.js через NPM:
+4. Установить глобально командный интерфейс [Grunt.js](http://gruntjs.com) через NPM:
 
         sudo npm install -g grunt-cli
 
-5. Установить глобально менеджер пакетов Bower через NPM:
+5. Установить глобально менеджер пакетов [Bower](http://bower.io) через NPM:
 
         sudo npm install -g bower
 
@@ -35,14 +35,14 @@
         cd /path/to/kitgeo
         npm install
 
-    В результате появится директоия `node_modules`.
+    В результате появится директория `node_modules`.
 
 8. Установить библиотеки, требуемые для работы сайта, через Bower (в том случае, если они ещё не установлены в
-директорию `src/lib`:
+директорию `src/lib`):
 
         bower install
 
-# Настройка окружения в Windows 7
+## Настройка окружения в Windows 7
 
 1. Установить [Jekyll на Windows](http://jekyllrb.com/docs/windows/), придерживаясь
 [следующей инструкции](http://jekyll-windows.juthilo.com/).
@@ -51,7 +51,7 @@
     В ходе процесса установки не забыть добавить Ruby в переменную окружения `PATH`. Проверить установку можно в
     консоли:
 
-        ruby --version
+            ruby --version
 
     Исполняемый файл Development Kit является самораспаковывающимся архивом - при распаковке важно задать путь
     без пробелов, например, `C:\RubyDevKit`. После распаковки архива из директории под правами администратора запустить:
@@ -62,14 +62,14 @@
 
     - Установить Jekyll:
 
-        gem install jekyll
+            gem install jekyll
 
     В случае возникновения ошибки вида:
 
-        > ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
-        >          Unable to download data from https://rubygems.org/ -
-        > SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B:
-        > certificate verify failed (https://api.rubygems.org/latest_specs.4.8.gz)
+    > ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
+    >          Unable to download data from https://rubygems.org/ -
+    > SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B:
+    > certificate verify failed (https://api.rubygems.org/latest_specs.4.8.gz)
 
     прописать источник пакетов по протоколу `http` вместо `https` (очень важно не забыть замыкающий слеш в ссылках):
 
@@ -81,12 +81,45 @@
 
         jekyll --version
 
-2. test.
+2. Скачать [инсталлятор Node.js](http://nodejs.org/) и установить Node.js вместе с [NPM](http://npmjs.com) и
+добавлением в переменную окружения `PATH` (настройки по умолчанию). Проверка установки:
+
+        node --version
+        npm --version
+
+3. От имени администратора установить глобально командный интерфейс [Grunt.js](http://gruntjs.com) через NPM:
+
+        npm install -g grunt-cli
+
+4. От имени администратора установить глобально менеджер пакетов [Bower](http://bower.io) через NPM:
+
+        npm install -g bower
+
+5. Клонировать репозиторий:
+
+        git clone git@github.com:kitgeo/kitgeo.github.io C:\path\to\kitgeo
+
+    или
+
+        git clone https://github.com/kitgeo/kitgeo.github.io C:\path\to\kitgeo
+
+6. Из корневой директории репозитория установить локально пакеты, требуемые для разработки сайта:
+
+        C:
+        cd path\to\kitgeo
+        npm install
+
+    В результате появится директория `node_modules`.
+
+7. Установить библиотеки, требуемые для работы сайта, через Bower (в том случае, если они ещё не установлены в
+директорию `src/lib`):
+
+        bower install
 
 ## Обновление и сборка сайта
 
-Сайт создан с использованием [Jekyll](http://jekyllrb.com) и публикуется в Интернете как
-[Github Pages](https://pages.github.com/).
+Сайт создан с использованием [Jekyll](http://jekyllrb.com), публикуется в Интернете как
+[Github Pages](https://pages.github.com/) и всегда доступен по адресу [kitgeo.github.io](http://kitgeo.github.io).
 
 Текстовые вставки оформлены в виде [Markdown](http://daringfireball.net/projects/markdown/)-файлов, лежащих в
 поддиректории `_includes`, и если необходимо изменить какую-то информацию, то нужно править их.
@@ -95,7 +128,7 @@
 
 1. Вносятся необходимые правки, например, в Markdown-файлах.
 
-2. Пересобирается сайт [командой Grunt умолчанию](http://gruntjs.com/creating-tasks), запускаемой из корневой
+2. Пересобирается сайт [командой Grunt по умолчанию](http://gruntjs.com/creating-tasks), запускаемой из корневой
 директории репозитория:
 
         cd /path/to/kitgeo
@@ -130,12 +163,13 @@
 ## Задачи Grunt
 
 - `grunt` или `grunt build` - полностью собрать сайт (последовательное выполнение задач `copy`, `css`, `js`, `jekyll`);
-- `grunt copy` - копирует необходимые для сайта шрифты и изображения в поддиректорию `assets`;
-- `grunt css` - скомпилировать LESS в CSS;
-- `grunt js` - проверить качество JavaScript-кода и минимизировать его в один файл;
-- `grunt jekyll` - собрать статические HTML-файлы сайта при помощи Jekyll;
-- `grunt server` - запускает локальный веб-сервер для отдачи статических файлов из поддиректории `_site` на 7999-м порте;
-- `grunt watch` - полностью собирает сайт, запускает локальный веб-сервер и следит за изменениями исходных кодов с
+- `grunt copy` - скопировать необходимые для сайта шрифты и изображения в поддиректории `assets/fonts` и `assets/img`
+соответственно;
+- `grunt css` - скомпилировать LESS в CSS в поддиректорию `assets/css`;
+- `grunt js` - проверить качество JavaScript-кода и минимизировать его в поддиректорию `assets/js`;
+- `grunt jekyll` - собрать все статические файлы сайта при помощи Jekyll в поддиректорию `_site`;
+- `grunt server` - запустить локальный веб-сервер для отдачи статических файлов из поддиректории `_site` на 7999-м порте;
+- `grunt watch` - полностью собрать сайт, запустить локальный веб-сервер и следить за изменениями исходных кодов с
 целью автоматической пересборки сайта.
 
 TODO: реализовать `grunt clean` и `grunt rebuild`.
