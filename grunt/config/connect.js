@@ -3,10 +3,17 @@ module.exports = function(grunt) {
     'use strict';
 
     return {
-        server: {
+        watch: {
             options: {
                 port: 7999,
                 base: '_site'
+            }
+        },
+        server: {
+            options: {
+                port: 7999,
+                base: '_site',
+                keepalive: true
             }
         }
     };

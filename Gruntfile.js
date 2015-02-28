@@ -32,8 +32,12 @@ module.exports = function(grunt) {
 
     grunt.registerTask('run', [
         'build',
-        'connect',
+        'connect:watch',
         'watch'
+    ]);
+
+    grunt.registerTask('server', [
+        'connect:server'
     ]);
 
     grunt.registerTask('default', [

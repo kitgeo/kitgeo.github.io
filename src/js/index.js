@@ -1,4 +1,16 @@
 (function($) {
+    $(window).on('load', function() {
+        $('body').removeClass('loading');
+
+        $.stellar({
+            horizontalScrolling: false
+        });
+    });
+
+    $(window).on('resize', function() {
+        $.stellar('refresh');
+    });
+
     $(function() {
         // Navbar anchors
         $('#main-navbar').on('click', 'a', function(event) {
@@ -14,7 +26,7 @@
             }
 
             event.preventDefault();
-            $(document.body).animate({
+            $('body,html').animate({
                 'scrollTop': scrollTop
             }, {
                 duration: 500,
@@ -23,11 +35,6 @@
                     location.hash = href;
                 }
             });
-        });
-
-        // Parallax effects
-        $.stellar({
-            horizontalScrolling: false
         });
 
         // Feedback form

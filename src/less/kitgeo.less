@@ -59,6 +59,26 @@ html {
 
 body {
     height: 100%;
+
+    &.loading {
+        position: relative;
+
+        * {
+            display: none;
+        }
+
+        .loader {
+            position: absolute;
+            display: block;
+            top: 40%;
+            left: 50%;
+            margin-top: -64px;
+            margin-left: -64px;
+            width: 128px;
+            height: 128px;
+            background: url('../img/loading.gif') no-repeat;
+        }
+    }
 }
 
 .navbar-brand img {
