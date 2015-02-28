@@ -7,11 +7,12 @@ layout: default
     <div class="slogan">
         <!--
         <div class="background">
-            {% include start-picture.html %}
+            {% include start.md %}
         </div>
         -->
         <div class="content">
-            {% include start-picture.html %}
+            {% capture start %}{% include start.md %}{% endcapture %}
+            {{ start | markdownify }}
         </div>
     </div>
 </div>
@@ -56,13 +57,17 @@ layout: default
         <li data-target=".maps-online" data-slide-to="6"></li>
     </ol>
 
+    <div class="carousel-caption-global">
+        <div class="content">
+            {% capture mapsonline %}{% include maps-online.md %}{% endcapture %}
+            {{ mapsonline | markdownify }}
+        </div>
+    </div>
+
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <img src="assets/img/slideshow-1.jpg" alt="" />
-            <div class="carousel-caption">
-                Инновационные программные решения реалистичной 3D-визуализации
-            </div>
         </div>
         <div class="item">
             <img src="assets/img/slideshow-2.jpg" alt="" />
