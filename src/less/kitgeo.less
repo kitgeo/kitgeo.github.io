@@ -260,16 +260,17 @@ body {
         .form-group.required .control-label:after {
             margin: 0 0 0 6px;
             content: "*";
-            color: #ee0000;
+            color: #d00;
         }
 
         .form-submit-error {
             margin: 20px 0;
+            text-shadow: none;
         }
 
         .form-error {
             text-align: left;
-            color: #ee0000;
+            color: #d00;
             font-size: 85%;
         }
 
@@ -287,6 +288,7 @@ body {
     .form-submit-success {
         margin: 50px auto 0;
         max-width: 600px;
+        text-shadow: none;
     }
 
     h1, h2, h3, h4, h5, h6, p, label {
@@ -303,9 +305,17 @@ body {
 
         text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.75);
 
+        a {
+            color: #eecc22;
+        }
+
         .feedback-form {
+            .form-group.required .control-label:after {
+                color: #eecc22;
+            }
+
             .form-error {
-                color: #fff;
+                color: #eecc22;
             }
         }
 
