@@ -47,6 +47,42 @@
 1. Установить [Jekyll на Windows](http://jekyllrb.com/docs/windows/), придерживаясь
 [следующей инструкции](http://jekyll-windows.juthilo.com/).
 
+    - Скачать [инсталлятор Ruby и Development Kit](http://rubyinstaller.org/downloads/) нужной архитектуры.
+    В ходе процесса установки не забыть добавить Ruby в переменную окружения `PATH`. Проверить установку можно в
+    консоли:
+
+        ruby --version
+
+    Исполняемый файл Development Kit является самораспаковывающимся архивом - при распаковке важно задать путь
+    без пробелов, например, `C:\RubyDevKit`. После распаковки архива из директории под правами администратора запустить:
+
+        cd C:\RubyDevKit
+        ruby dk.rb init
+        ruby dk.rb install
+
+    - Установить Jekyll:
+
+        gem install jekyll
+
+    В случае возникновения ошибки вида:
+
+        > ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
+        >          Unable to download data from https://rubygems.org/ -
+        > SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B:
+        > certificate verify failed (https://api.rubygems.org/latest_specs.4.8.gz)
+
+    прописать источник пакетов по протоколу `http` вместо `https` (очень важно не забыть замыкающий слеш в ссылках):
+
+        gem sources --remove https://rubygems.org/
+        gem sources -a http://rubygems.org/
+        gem install jekyll
+
+    Проверка установки:
+
+        jekyll --version
+
+2. test.
+
 ## Обновление и сборка сайта
 
 Сайт создан с использованием [Jekyll](http://jekyllrb.com) и публикуется в Интернете как

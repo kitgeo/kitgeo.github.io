@@ -1,4 +1,5 @@
 auto: true
+encoding: utf-8
 include: [
   'assets'
 ]
