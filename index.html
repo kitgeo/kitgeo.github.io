@@ -2,12 +2,13 @@
 layout: default
 ---
 
-<div id="start" class="start">
-    <div class="picture" data-stellar-ratio="0.5" data-stellar-vertical-offset="-300"></div>
+<div id="start" data-stellar-background-ratio="0.5">
     <div class="slogan">
+        <!--
         <div class="background">
             {% include start-picture.html %}
         </div>
+        -->
         <div class="content">
             {% include start-picture.html %}
         </div>
@@ -16,9 +17,9 @@ layout: default
 
 <div id="services">
     <div class="container">
-        <h2>Услуги</h2>
-        <div class="row gap">
+        <div class="general row">
             <div class="col-md-12">
+                <h2>Услуги</h2>
                 {% capture services %}{% include services.md %}{% endcapture %}
                 {{ services | markdownify }}
             </div>
@@ -40,7 +41,7 @@ layout: default
     </div>
 </div>
 
-<div id="maps-online" class="carousel slide" data-ride="carousel" data-pause="false">
+<div id="maps-online" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#maps-online" data-slide-to="0" class="active"></li>
@@ -93,9 +94,9 @@ layout: default
 
 <div id="company">
     <div class="container">
-        <h2>О компании</h2>
-        <div class="row gap">
+        <div class="general row">
             <div class="col-md-12">
+                <h2>О компании</h2>
                 {% capture company %}{% include company.md %}{% endcapture %}
                 {{ company | markdownify }}
             </div>
@@ -114,50 +115,42 @@ layout: default
 </div>
 
 <div id="contacts">
-    <div class="picture hidden-xs" data-stellar-ratio="0.5" data-stellar-vertical-offset="-960"></div>
+    <div class="container">
+        <div class="contacts">
+            <h2>Контакты</h2>
+            {% capture contacts %}{% include contacts.md %}{% endcapture %}
+            {{ contacts | markdownify }}
+        </div>
 
-    <div class="contacts">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Обратная связь</h2>
-                    <form class="feedback-form">
-                        <div class="form-group">
-                            <label for="feedback-name">Имя</label>
-                            <input id="feedback-name" class="form-control" type="text" placeholder="Введите Ваше имя" />
-                        </div>
-                        <div class="form-group">
-                            <label for="feedback-email">Электронная почта</label>
-                            <input id="feedback-email" class="form-control" type="text" placeholder="Введите адрес Вашей электронной почты" />
-                        </div>
-                        <div class="form-group">
-                            <label for="feedback-phone">Телефон</label>
-                            <input id="feedback-phone" class="form-control" type="text" placeholder="Введите номер Вашего телефона" />
-                        </div>
-                        <div class="form-group">
-                            <label for="feedback-message">Сообщение</label>
-                            <textarea id="feedback-message" class="form-control" placeholder="Введите Ваше сообщение" rows="5"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-default">Отправить</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <h2>Контакты</h2>
-                    {% capture contacts %}{% include contacts.md %}{% endcapture %}
-                    {{ contacts | markdownify }}
+        <form class="feedback-form" method="post">
+            <h4>Обратная связь</h4>
+            <div class="form-group required">
+                <label class="col-sm-3 control-label">Имя</label>
+                <div class="col-sm-9">
+                    <input name="feedback-name" class="form-control" type="text" placeholder="Введите Ваше имя" />
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div id="counters">
-    <div class="container">
-        <div class="gap">
-            <a href="http://incube-ane.ru/">
-                <img src="assets/img/incube-logo.jpg" alt="" />
-            </a>
-        </div>
-        <p>&copy 2015 КИТГЕО. Все права защищены.</p>
+            <div class="form-group required">
+                <label class="col-sm-3 control-label">E-mail</label>
+                <div class="col-sm-9">
+                    <input name="feedback-email" class="form-control" type="email" placeholder="Введите адрес Вашей электронной почты" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Телефон</label>
+                <div class="col-sm-9">
+                    <input name="feedback-phone" class="form-control" type="text" placeholder="Введите номер Вашего телефона" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Сообщение</label>
+                <div class="col-sm-9">
+                    <textarea name="feedback-message" class="form-control" placeholder="Введите Ваше сообщение"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="btn btn-default">Отправить</button>
+            </div>
+        </form>
     </div>
 </div>

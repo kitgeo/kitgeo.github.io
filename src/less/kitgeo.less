@@ -62,14 +62,14 @@ body {
 }
 
 .navbar-brand img {
-    margin-top: -10px;
+    margin-top: -8px;
     vertical-align: middle;
 }
 
 .navbar-brand span {
     position: relative;
-    top: -2px;
-    margin: 0 0 0 10px;
+    top: -1px;
+    margin: 0 0 0 4px;
 }
 
 .container {
@@ -78,23 +78,15 @@ body {
     }
 }
 
-.gap {
-    margin: 65px 0;
-}
-
 #start {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 
-    .picture {
-        position: absolute;
-        width: 100%;
-        height: 150%;
-        background: url('../img/start-picture.jpg') center top no-repeat;
-        z-index: 499;
-    }
+    background-image: url('../img/start-picture.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: fixed;
 
     .slogan {
         position: absolute;
@@ -102,7 +94,6 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-
 
         h1 {
             font-size: @font-size-h1 * 0.7;
@@ -154,7 +145,6 @@ body {
             }
         }
 
-
         .text-center;
 
         .background {
@@ -191,12 +181,14 @@ body {
 
 #services {
     .text-center;
-    .gap;
+    margin: 30px 0 50px;
+
+    .general {
+        margin: 0 0 30px;
+    }
 }
 
 #maps-online {
-    .gap;
-
     .carousel-caption {
         visibility: hidden;
     }
@@ -211,50 +203,78 @@ body {
 
 #company {
     .text-center;
-    .gap;
+    margin: 30px 0 50px;
+
+    .general {
+        margin: 0 0 30px;
+    }
 }
 
 #contacts {
     .text-center;
-    .gap;
+    padding: 30px 0 50px;
+
     position: relative;
     width: 100%;
-    min-height: 100%;
     overflow: hidden;
 
-    .picture {
-        position: absolute;
-        width: 100%;
-        height: 150%;
-        background: url('../img/contacts-bg.jpg') center top no-repeat;
-        .opacity(.85);
-        z-index: 499;
+    .contacts {
+        margin: 0 0 50px;
+
+        p {
+            margin-bottom: 5px;
+        }
     }
 
-    .contacts {
-        .gap;
-        position: relative;
-        z-index: 500;
+    .feedback-form {
+        max-width: 600px;
+        margin: 30px auto 0;
+        .form-horizontal;
+
+        .form-group.required .control-label:after {
+            margin: 0 0 0 6px;
+            content: "*";
+            color: #ee0000;
+        }
+
+        [name="feedback-message"] {
+            resize: vertical;
+            height: 140px;
+            max-height: 264px;
+        }
+
+        .buttons {
+            text-align: right;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, p, label {
+        color: @text-color;
+    }
+
+    @media screen and (min-width: @screen-sm-min) {
+        background-image: url('../img/contacts-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-attachment: fixed;
+
+
+        padding: 30px 0 70px;
 
         h1, h2, h3, h4, h5, h6, p, label {
-            color: @text-color;
-        }
-
-        @media screen and (min-width: @screen-sm-min) {
-            h1, h2, h3, h4, h5, h6, p, label {
-                color: #fff;
-            }
-        }
-
-        .feedback-form {
-            width: 400px;
-            margin: 0 auto;
-            text-align: left;
+            color: #fff;
         }
     }
 }
 
-#counters {
+#footer {
     .text-center;
-    .gap;
+
+    @media screen and (min-width: @screen-sm-min) {
+        margin: 50px 0 0;
+    }
+
+    .references {
+        margin: 0 0 40px;
+    }
 }
