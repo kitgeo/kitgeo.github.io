@@ -8,14 +8,20 @@
             }
 
             var scrollTop = $(this).hasClass('navbar-brand') ? 0 : $(href).offset().top;
-            $(this).parents('.navbar-collapse').collapse('hide');
+            var $navbarCollapse = $(this).parents('.navbar-collapse');
+            if ($navbarCollapse.hasClass('in') || $navbarCollapse.hasClass('collapsing')) {
+                $navbarCollapse.collapse('hide');
+            }
 
             event.preventDefault();
             $(document.body).animate({
                 'scrollTop': scrollTop
             }, {
                 duration: 500,
-                queue: false
+                queue: false,
+                complete: function() {
+                    location.hash = href;
+                }
             });
         });
 
