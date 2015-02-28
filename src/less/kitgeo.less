@@ -116,6 +116,11 @@ body {
     background-position: 50% 0;
     background-attachment: fixed;
 
+    @media screen and (max-width: @screen-xs-max) {
+        background-image: none;
+        #gradient.vertical(#00b; #003);
+    }
+
     .slogan {
         position: absolute;
         top: @navbar-height;
@@ -153,33 +158,20 @@ body {
 
         .text-center;
 
-        .background {
-            color: transparent;
-            background: #00c;
-            .opacity(0.1);
-            z-index: 500;
-        }
-
         .content {
-            color: #fff;
-            text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.75);
-            z-index: 501;
-        }
-
-        .background,
-        .content {
-            padding: 30px 20px;
             position: absolute;
-            top: 10%;
+            top: 20%;
             left: 0;
             right: 0;
+            padding: 40px 30px;
+            color: #fff;
+            text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.75);
         }
 
-        @media screen and (min-width: @screen-sm-min) {
-            .background,
+        @media screen and (max-width: @screen-xs-max) {
             .content {
-                padding: 40px 30px;
-                top: 20%;
+                top: 10%;
+                padding: 30px 20px;
             }
         }
     }
