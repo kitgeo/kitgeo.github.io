@@ -1,9 +1,30 @@
 (function($) {
     $(function() {
+        // Navbar anchors
+        $('#main-navbar').on('click', 'a', function(event) {
+            var href = $(this).attr('href');
+            if (!href.match(/^#/) && !$(this).hasClass('navbar-brand')) {
+                return;
+            }
+
+            var scrollTop = $(this).hasClass('navbar-brand') ? 0 : $(href).offset().top;
+            $(this).parents('.navbar-collapse').collapse('hide');
+
+            event.preventDefault();
+            $(document.body).animate({
+                'scrollTop': scrollTop
+            }, {
+                duration: 500,
+                queue: false
+            });
+        });
+
+        // Parallax effects
         $.stellar({
             horizontalScrolling: false
         });
 
+        // Feedback form
         var validationResult = false;
         var submitting = false;
 
