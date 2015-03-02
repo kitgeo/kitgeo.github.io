@@ -7,13 +7,15 @@ layout: default
 <div id="start"></div>
 <div class="start" data-stellar-background-ratio="0.5">
     <div class="wrapper">
-        <div class="content top">
-            {% capture start1 %}{% include start-1.md %}{% endcapture %}
-            {{ start1 | markdownify }}
-        </div>
-        <div class="content middle">
-            {% capture start2 %}{% include start-2.md %}{% endcapture %}
-            {{ start2 | markdownify }}
+        <div class="content">
+            <div class="top">
+                {% capture start1 %}{% include start-1.md %}{% endcapture %}
+                {{ start1 | markdownify }}
+            </div>
+            <div class="middle">
+                {% capture start2 %}{% include start-2.md %}{% endcapture %}
+                {{ start2 | markdownify }}
+            </div>
         </div>
     </div>
 </div>
