@@ -1,17 +1,24 @@
 (function($) {
-    $(window).on('load', function() {
-        $('body').removeClass('loading');
+    var enableParallax = true;
 
-        $.stellar({
-            horizontalScrolling: false
+    if (enableParallax) {
+        $(window).on('load', function() {
+            $('body').removeClass('loading');
+
+            $.stellar({
+                horizontalScrolling: false
+            });
+        }).on('resize', function() {
+            $.stellar('refresh');
         });
-    });
-
-    $(window).on('resize', function() {
-        $.stellar('refresh');
-    });
+    }
 
     $(function() {
+        if (!enableParallax) {
+            $('body').removeClass('loading');
+            $('[data-stellar-background-ratio]').css('backgroundAttachment', 'scroll');
+        }
+
         // Navbar anchors
         $('#main-navbar').on('click', 'a', function(event) {
             var href = $(this).attr('href');
