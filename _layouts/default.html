@@ -10,8 +10,10 @@
 </head>
 <body class="loading">
     <div class="loader"></div>
-    {% include navbar.html %}
-    {{ content }}
-    {% include footer.html %}
+    <div class="wrapper">
+        {% include navbar.html %}
+        {{ content }}
+        {% include footer.html %}
+    </div>
 </body>
 </html>
