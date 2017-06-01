@@ -1,17 +1,16 @@
-auto: true
+source: .
+destination: ./_site
 encoding: utf-8
 include: [
   'assets'
 ]
 exclude: [
-  'build',
-  'grunt',
   'node_modules',
   'src',
-  'bower.json',
-  'Gruntfile.js',
+  'npm-debug.log',
   'package.json',
-  'README.md'
+  'README.md',
+  'webpack.config.babel.js'
 ]
 defaults:
   -

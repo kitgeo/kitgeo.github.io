@@ -6,7 +6,11 @@
     <meta name="description" content="Геоинформационные консалтинг и технологии" />
     <meta name="keywords" content="kitgeo,китгео,gis,geo,map,maps,гис,гео,карты,картография,навигация" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="assets/css/kitgeo.min.css" />
+    {% if page.css %}
+    {% for cssfile in page.css %}
+    <link rel="stylesheet" type="text/css" href="assets/css/{{ cssfile }}.css" />
+    {% endfor %}
+    {% endif %}
 </head>
 <body class="loading">
     <div class="loader"></div>
@@ -15,5 +19,12 @@
         {{ content }}
         {% include footer.html %}
     </div>
+    {% if page.js %}
+    <script src="assets/js/manifest.js"></script>
+    <script src="assets/js/vendor.js"></script>
+    {% for jsfile in page.js %}
+    <script src="assets/js/{{ jsfile }}.js"></script>
+    {% endfor %}
+    {% endif %}
 </body>
 </html>

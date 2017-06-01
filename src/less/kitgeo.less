@@ -1,56 +1,5 @@
-// Core variables and mixins
 @import "font.less";
-@import "variables.less";
-@import "../lib/bootstrap/less/mixins.less";
-
-// Reset and dependencies
-@import "../lib/bootstrap/less/normalize.less";
-@import "../lib/bootstrap/less/print.less";
-@import "../lib/bootstrap/less/glyphicons.less";
-
-// Core CSS
-@import "../lib/bootstrap/less/scaffolding.less";
-@import "../lib/bootstrap/less/type.less";
-@import "../lib/bootstrap/less/code.less";
-@import "../lib/bootstrap/less/grid.less";
-@import "../lib/bootstrap/less/tables.less";
-@import "../lib/bootstrap/less/forms.less";
-@import "../lib/bootstrap/less/buttons.less";
-
-// Components
-@import "../lib/bootstrap/less/component-animations.less";
-@import "../lib/bootstrap/less/dropdowns.less";
-@import "../lib/bootstrap/less/button-groups.less";
-@import "../lib/bootstrap/less/input-groups.less";
-@import "../lib/bootstrap/less/navs.less";
-@import "../lib/bootstrap/less/navbar.less";
-@import "../lib/bootstrap/less/breadcrumbs.less";
-@import "../lib/bootstrap/less/pagination.less";
-@import "../lib/bootstrap/less/pager.less";
-@import "../lib/bootstrap/less/labels.less";
-@import "../lib/bootstrap/less/badges.less";
-@import "../lib/bootstrap/less/jumbotron.less";
-@import "../lib/bootstrap/less/thumbnails.less";
-@import "../lib/bootstrap/less/alerts.less";
-@import "../lib/bootstrap/less/progress-bars.less";
-@import "../lib/bootstrap/less/media.less";
-@import "../lib/bootstrap/less/list-group.less";
-@import "../lib/bootstrap/less/panels.less";
-@import "../lib/bootstrap/less/responsive-embed.less";
-@import "../lib/bootstrap/less/wells.less";
-@import "../lib/bootstrap/less/close.less";
-
-// Components w/ JavaScript
-@import "../lib/bootstrap/less/modals.less";
-@import "../lib/bootstrap/less/tooltip.less";
-@import "../lib/bootstrap/less/popovers.less";
-@import "../lib/bootstrap/less/carousel.less";
-
-// Utility classes
-@import "../lib/bootstrap/less/utilities.less";
-@import "../lib/bootstrap/less/responsive-utilities.less";
-
-
+@import "bootstrap.less";
 
 html {
     min-height: 100%;
@@ -76,7 +25,7 @@ body {
             margin-left: -64px;
             width: 128px;
             height: 128px;
-            background: url('../img/loading.gif') no-repeat;
+            background: url('../css-img/loading.gif') no-repeat;
         }
     }
 }
@@ -87,12 +36,12 @@ body {
     margin: 0 auto;
 }
 
-.navbar-brand img {
+.navbar-brand > img {
+    display: inline !important;
     margin-top: -8px;
-    vertical-align: middle;
 }
 
-.navbar-brand span {
+.navbar-brand > img ~ span {
     position: relative;
     top: -1px;
     margin: 0 0 0 4px;
@@ -117,13 +66,13 @@ body {
     height: 100%;
     min-height: 480px;
 
-    background-image: url('../img/start-picture.jpg');
+    background-image: url('../css-img/start-picture.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-attachment: fixed;
 
     @media screen and (max-width: @screen-xs-max) {
-        background-image: url('../img/start-picture-1280x800.jpg');
+        background-image: url('../css-img/start-picture-1280x800.jpg');
     }
 
     .wrapper {
@@ -283,7 +232,7 @@ body {
     }
 
     @media screen and (min-width: @screen-sm-min) {
-        background-image: url('../img/contacts-bg.jpg');
+        background-image: url('../css-img/contacts-bg.jpg');
         background-repeat: no-repeat;
         background-position: 50% 0;
         background-attachment: fixed;

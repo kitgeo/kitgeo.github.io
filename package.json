@@ -1,9 +1,18 @@
 {
   "name": "kitgeo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Kitgeo site",
   "main": "index.html",
   "scripts": {
+    "start": "jekyll serve",
+    "build": "npm run copy:img && npm run build:assets && npm run build:site",
+    "build:assets": "webpack",
+    "build:site": "jekyll build",
+    "copy:img": "copyfiles -u 2 -s \"src/img/**/*\" assets/img",
+    "watch:assets": "webpack --watch",
+    "clean": "npm run clean:assets && npm run clean:site",
+    "clean:assets": "rimraf assets",
+    "clean:site": "rimraf _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,15 +24,27 @@
   "bugs": {
     "url": "https://github.com/kitgeo/kitgeo.github.io/issues"
   },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "~2.1.1",
+    "jquery-form-validator": "^2.3.64",
+    "jquery.stellar": "^0.6.2",
+    "lightbox2": "^2.9.0",
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-connect": "~0.9.0",
-    "grunt-contrib-copy": "~0.7.0",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-less": "~0.12.0",
-    "grunt-contrib-uglify": "~0.7.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-jekyll": "~0.4.2",
-    "load-grunt-config": "~0.14.0"
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "copyfiles": "^1.2.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.1",
+    "webpack": "^2.6.1"
   }
 }
