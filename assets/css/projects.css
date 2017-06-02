@@ -7079,6 +7079,9 @@ body.loading .loader {
   height: 128px;
   background: url(../css-img/loading.9d4e5a.gif) no-repeat;
 }
+div ~ p {
+  margin: 12.5px 0 0;
+}
 .wrapper {
   max-width: 1880px;
   height: 100%;
@@ -7125,13 +7128,16 @@ body.loading .loader {
   padding: 0;
 }
 .project-item {
-  margin: 30px 0;
+  margin: 40px 0;
 }
 .project-item:first-child {
   margin-top: 0;
 }
 .project-item:last-child {
   margin-bottom: 0;
+}
+.project-item-description {
+  text-align: justify;
 }
 .project-item-description > h1,
 .project-item-description > h2,
@@ -7141,16 +7147,28 @@ body.loading .loader {
 .project-item-description > h6 {
   margin-top: 0;
 }
+.project-item-images {
+  text-align: center;
+}
 .project-item-images > a {
-  display: block;
-  margin: 10px 0;
-}
-.project-item-images > a:first-child {
-  margin-top: 0;
-}
-.project-item-images > a:last-child {
-  margin-bottom: 0;
+  display: inline-block;
+  margin-top: 10px;
 }
 .project-item-images > a > img {
-  width: 100%;
+  width: 200px;
+}
+@media screen and (min-width: 992px) {
+  .project-item-images {
+    display: block;
+    margin: 10px 0;
+  }
+  .project-item-images:first-child {
+    margin-top: 0;
+  }
+  .project-item-images:last-child {
+    margin-bottom: 0;
+  }
+  .project-item-images > a > img {
+    width: 100%;
+  }
 }

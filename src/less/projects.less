@@ -13,7 +13,7 @@
 }
 
 .project-item {
-    margin: 30px 0;
+    margin: 40px 0;
 
     &:first-child {
         margin-top: 0;
@@ -25,6 +25,8 @@
 }
 
 .project-item-description {
+    text-align: justify;
+
     > h1,
     > h2,
     > h3,
@@ -36,7 +38,18 @@
 }
 
 .project-item-images {
+    text-align: center;
+
     > a {
+        display: inline-block;
+        margin-top: 10px;
+
+        > img {
+            width: 200px;
+        }
+    }
+
+    @media screen and (min-width: @screen-md-min) {
         display: block;
         margin: 10px 0;
 
@@ -48,8 +61,10 @@
             margin-bottom: 0;
         }
 
-        > img {
-            width: 100%;
+        > a {
+            > img {
+                width: 100%;
+            }
         }
     }
 }

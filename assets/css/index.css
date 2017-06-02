@@ -6869,6 +6869,9 @@ body.loading .loader {
   height: 128px;
   background: url(../css-img/loading.9d4e5a.gif) no-repeat;
 }
+div ~ p {
+  margin: 12.5px 0 0;
+}
 .wrapper {
   max-width: 1880px;
   height: 100%;
