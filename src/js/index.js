@@ -1,28 +1,13 @@
 import $ from 'jquery';
 import 'bootstrap';
-import 'jquery.stellar';
 import 'jquery-form-validator';
 
 import '../less/kitgeo.less';
 
-const enableParallax = false;
-
-if (enableParallax) {
-    $(window).on('load', function() {
-        $('body').removeClass('loading');
-        $.stellar({
-            horizontalScrolling: false
-        });
-    }).on('resize', function() {
-        $.stellar('refresh');
-    });
-}
-
 $(function() {
-    if (!enableParallax) {
-        $('body').removeClass('loading');
-        $('[data-stellar-background-ratio]').css('backgroundAttachment', 'scroll');
-    }
+    $('body').removeClass('loading');
+    $('.start').css('backgroundAttachment', 'scroll');
+    $('.contacts').css('backgroundAttachment', 'scroll');
 
     // Navbar anchors
     $('#main-navbar').on('click', 'a', function(event) {

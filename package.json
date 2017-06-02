@@ -13,6 +13,7 @@
     "clean": "npm run clean:assets && npm run clean:site",
     "clean:assets": "rimraf assets",
     "clean:site": "rimraf _site",
+    "rebuild": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +29,6 @@
     "bootstrap": "^3.3.7",
     "jquery": "~2.1.1",
     "jquery-form-validator": "^2.3.64",
-    "jquery.stellar": "^0.6.2",
     "lightbox2": "^2.9.0",
     "lodash": "^4.17.4"
   },
