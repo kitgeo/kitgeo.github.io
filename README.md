@@ -4,95 +4,95 @@
 
 1. Установить [Ruby](https://github.com/ruby/ruby) и компилятор:
 
-        sudo apt-get install ruby ruby-dev make gcc
+       sudo apt-get install ruby ruby-dev make gcc
 
 2. Установить [Jekyll](http://jekyllrb.com):
 
-        sudo gem install jekyll
+       sudo gem install jekyll
 
 3. Установить [Node.js](http://nodejs.org) и [NPM](http://npmjs.com) одним из способов:
 
-    - при помощи [скрипта NVM](https://github.com/creationix/nvm);
+   - при помощи [скрипта NVM](https://github.com/creationix/nvm);
      
-    - из репозиториев:
+   - из репозиториев:
 
-            sudo apt-get install nodejs npm
+         sudo apt-get install nodejs npm
 
 4. Клонировать репозиторий:
 
-        git clone git@github.com:kitgeo/kitgeo.github.io /path/to/kitgeo
+       git clone git@github.com:kitgeo/kitgeo.github.io /path/to/kitgeo
 
-    или
+   или
 
-        git clone https://github.com/kitgeo/kitgeo.github.io /path/to/kitgeo
+       git clone https://github.com/kitgeo/kitgeo.github.io /path/to/kitgeo
 
 5. Из корневой директории репозитория установить необходимые библиотеки и пакеты, требуемые для разработки сайта:
 
-        cd /path/to/kitgeo
-        npm install
+       cd /path/to/kitgeo
+       npm install
 
-    В результате появится директория `node_modules`.
+   В результате появится директория `node_modules`.
 
 ## Настройка окружения в Windows 7
 
 1. Установить [Jekyll на Windows](http://jekyllrb.com/docs/windows/), придерживаясь
 [следующей инструкции](http://jekyll-windows.juthilo.com/).
 
-    - Скачать [инсталлятор Ruby и Development Kit](http://rubyinstaller.org/downloads/) нужной архитектуры.
-    В ходе процесса установки не забыть добавить Ruby в переменную окружения `PATH`. Проверить установку можно в
-    консоли:
+   - Скачать [инсталлятор Ruby и Development Kit](http://rubyinstaller.org/downloads/) нужной архитектуры.
+   В ходе процесса установки не забыть добавить Ruby в переменную окружения `PATH`. Проверить установку можно в
+   консоли:
 
-            ruby --version
+         ruby --version
 
-    Исполняемый файл Development Kit является самораспаковывающимся архивом - при распаковке важно задать путь
-    без пробелов, например, `C:\RubyDevKit`. После распаковки архива из директории под правами администратора запустить:
+   Исполняемый файл Development Kit является самораспаковывающимся архивом - при распаковке важно задать путь
+   без пробелов, например, `C:\RubyDevKit`. После распаковки архива из директории под правами администратора запустить:
 
-        cd C:\RubyDevKit
-        ruby dk.rb init
-        ruby dk.rb install
+       cd C:\RubyDevKit
+       ruby dk.rb init
+       ruby dk.rb install
 
-    - Установить Jekyll:
+   - Установить Jekyll:
 
-            gem install jekyll
+         gem install jekyll
 
-    В случае возникновения ошибки вида:
+   В случае возникновения ошибки вида:
 
-    > ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
-    >          Unable to download data from https://rubygems.org/ -
-    > SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B:
-    > certificate verify failed (https://api.rubygems.org/latest_specs.4.8.gz)
+   > ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
+   >          Unable to download data from https://rubygems.org/ -
+   > SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B:
+   > certificate verify failed (https://api.rubygems.org/latest_specs.4.8.gz)
 
-    прописать источник пакетов по протоколу `http` вместо `https` (очень важно не забыть замыкающий слеш в ссылках):
+   прописать источник пакетов по протоколу `http` вместо `https` (очень важно не забыть замыкающий слеш в ссылках):
 
-        gem sources --remove https://rubygems.org/
-        gem sources -a http://rubygems.org/
-        gem install jekyll
+       gem sources --remove https://rubygems.org/
+       gem sources -a http://rubygems.org/
+       gem install jekyll
 
-    Проверка установки:
+   Проверка установки:
 
-        jekyll --version
+       jekyll --version
 
 2. Скачать [инсталлятор Node.js](http://nodejs.org/) и установить Node.js вместе с [NPM](http://npmjs.com) и
 добавлением в переменную окружения `PATH` (настройки по умолчанию). Проверка установки:
 
-        node --version
-        npm --version
+       node --version
+       npm --version
 
 3. Клонировать репозиторий:
 
-        git clone git@github.com:kitgeo/kitgeo.github.io C:\path\to\kitgeo
+       git clone git@github.com:kitgeo/kitgeo.github.io C:\path\to\kitgeo
 
-    или
+   или
 
-        git clone https://github.com/kitgeo/kitgeo.github.io C:\path\to\kitgeo
+       git clone https://github.com/kitgeo/kitgeo.github.io C:\path\to\kitgeo
 
 4. Из корневой директории репозитория установить библиотеки и пакеты, требуемые для разработки сайта:
 
-        C:
-        cd path\to\kitgeo
-        npm install
+       C:
+       cd path\to\kitgeo
+       npm install
 
-    В результате появится директория `node_modules`.
+   В результате появится директория `node_modules`.
 
 ## Обновление и сборка сайта
 
@@ -108,72 +108,72 @@
 
 2. Из корневой директории репозитория запустить команда на сборку:
 
-        npm run build
+       npm run build
         
-    Если требуется пересборка с удалением всех ранее сгенерированных файлов, то вместо этой команды запустить:
+   Если требуется пересборка с удалением всех ранее сгенерированных файлов, то вместо этой команды запустить:
 
-        npm run rebuild        
+       npm run rebuild        
 
-    В результате будет осуществлена сборка кода (файлы JS, CSS, шрифты и картинки) в директорию `assets`, а затем
-    будет сгенерирован набор статических файлов сайта в поддиректории `_site`. Содержимое этой директории и есть
-    сайт, который будет опубликован на Github Pages.
+   В результате будет осуществлена сборка кода (файлы JS, CSS, шрифты и картинки) в директорию `assets`, а затем
+   будет сгенерирован набор статических файлов сайта в поддиректории `_site`. Содержимое этой директории и есть
+   сайт, который будет опубликован на Github Pages.
     
-    > Директория `_site` не находится под управлением git, так как после отправки очередного коммита Github Pages
-    > автоматически осуществит сборку сайта Jekyll. Однако в коммите должны присутствовать пересобранные файлы
-    > директории `assets` в том случае, если в процессе обновления сайта осуществлялись правки в директориях
-    > `src/js`, `src/less` и `src/css-img`.
+   > Директория `_site` не находится под управлением git, так как после отправки очередного коммита Github Pages
+   > автоматически осуществит сборку сайта Jekyll. Однако в коммите должны присутствовать пересобранные файлы
+   > директории `assets` в том случае, если в процессе обновления сайта осуществлялись правки в директориях
+   > `src/js`, `src/less` и `src/css-img`.
     
-    Для того, чтобы сгенерированные файлы JS и CSS были минифицированы в процессе сборке, команду необходимо
-    запускать с переменной окружения `NODE_ENV`, установленной в `production`:
+   Для того, чтобы сгенерированные файлы JS и CSS были минифицированы в процессе сборке, команду необходимо
+   запускать с переменной окружения `NODE_ENV`, установленной в `production`:
     
-        NODE_ENV=production npm run rebuild
+       NODE_ENV=production npm run rebuild
 
-    Для локальной разработки можно запустить веб-сервер:
+   Для локальной разработки можно запустить веб-сервер:
     
-        npm start
+       npm start
             
-    и открыть страницу `http://localhost:4000` в браузере. Каждый раз при обнаружении изменений файлов сайт Jekyll
-    будет пересобираться автоматически.
+   и открыть страницу `http://localhost:4000` в браузере. Каждый раз при обнаружении изменений файлов сайт Jekyll
+   будет пересобираться автоматически.
     
-    Для инкрементной сборки файлов из директории `src` в директорию `assets` необходимо запустить:
+   Для инкрементной сборки файлов из директории `src` в директорию `assets` необходимо запустить:
     
-        npm run watch:assets
+       npm run watch:assets
 
 3. Создать коммит, включающий все изменения после сборки:
 
-        git add -A
-        git commit -m "Some changes are made."
+       git add -A
+       git commit -m "Some changes are made."
 
 4. Отправить коммит в удалённый репозиторий в ветку `master`:
 
-        git push origin master.
+       git push origin master.
 
-    В результате сайт должен обновиться в Интернете по адресу [kitgeo.github.io](http://kitgeo.github.io).
+   В результате сайт должен обновиться в Интернете по адресу [kitgeo.github.io](http://kitgeo.github.io).
     
 ### Пример добавления нового проекта
     
 1. Клонировать репозиторий:
     
-        git clone git@github.com:kitgeo/kitgeo.github.io /path/to/kitgeo 
+       git clone git@github.com:kitgeo/kitgeo.github.io /path/to/kitgeo 
 
 2. Выбрать для проекта текстовый идентификатор, например, `my-new-project` и создать для него Markdown-файл с описанием
 `_includes/projects/my-new-project.md` в кодировке UTF-8. Для заголовка проекта использовать `###`. Пример содержимого
 файла:
 
-        ### My new project
+       ### My new project
         
-        В первом абзаце идёт общее описание проекта...
+       В первом абзаце идёт общее описание проекта...
         
-        Можно использовать списки с описанием особенностей:
+       Можно использовать списки с описанием особенностей:
         
-        - первая фича;
-        - ещё одна фича;
-        - много разных фич.
+       - первая фича;
+       - ещё одна фича;
+       - много разных фич.
     
-        Также **допускается** использовать любой синтаксис [Markdown](http://daringfireball.net/projects/markdown/) и
-        даже html, например, для вставки видео из YouTube:
+       Также **допускается** использовать любой синтаксис [Markdown](http://daringfireball.net/projects/markdown/) и
+       даже html, например, для вставки видео из YouTube:
         
-        <div><iframe ...></iframe></div>
+       <div><iframe ...></iframe></div>
 
 3. Если для проекта есть скриншоты, то их необходимо подготовить в сжатом формате для веба и положить в директорию
 `assets/img/projects/my-new-project`. Для детального просмотра размеры изображения должны быть не очень малы, например,
@@ -183,11 +183,11 @@
 
 4. Добавить сделанные правки в коммит:
 
-        git add -A
-        git commit -m "My new project is added."
+       git add -A
+       git commit -m "My new project is added."
         
 5. Отправить коммит в удалённый репозиторий в ветку `master`:
 
-        git push origin master
+       git push origin master
         
     Проверить получившийся результат на странице [kitgeo.github.io/projects.html](http://kitgeo.github.io/projects.html).
