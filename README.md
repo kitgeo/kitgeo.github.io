@@ -156,9 +156,9 @@
     
        git clone git@github.com:kitgeo/kitgeo.github.io /path/to/kitgeo 
 
-2. Выбрать для проекта текстовый идентификатор, например, `my-new-project` и создать для него Markdown-файл с описанием
-`_includes/projects/my-new-project.md` в кодировке UTF-8. Для заголовка проекта использовать `###`. Пример содержимого
-файла:
+2. Выбрать для проекта текстовый идентификатор, например, `my-new-project` и создать для него [Markdown](http://daringfireball.net/projects/markdown/)-файл
+с описанием `_includes/projects/my-new-project.md` в кодировке UTF-8. Для заголовка проекта использовать `###`. Пример
+содержимого файла:
 
        ### My new project
         
