@@ -25,8 +25,6 @@
 }
 
 .project-item-description {
-    text-align: justify;
-
     > h1,
     > h2,
     > h3,
@@ -34,6 +32,10 @@
     > h5,
     > h6 {
         margin-top: 0;
+    }
+
+    > p {
+        text-align: justify;
     }
 }
 
@@ -50,18 +52,20 @@
     }
 
     @media screen and (min-width: @screen-md-min) {
-        display: block;
-        margin: 10px 0;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        padding-top: 50px;
 
         > a {
+            display: block;
+            margin: 10px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
             > img {
                 width: 100%;
             }

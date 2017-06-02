@@ -7136,9 +7136,6 @@ div ~ p {
 .project-item:last-child {
   margin-bottom: 0;
 }
-.project-item-description {
-  text-align: justify;
-}
 .project-item-description > h1,
 .project-item-description > h2,
 .project-item-description > h3,
@@ -7146,6 +7143,9 @@ div ~ p {
 .project-item-description > h5,
 .project-item-description > h6 {
   margin-top: 0;
+}
+.project-item-description > p {
+  text-align: justify;
 }
 .project-item-images {
   text-align: center;
@@ -7159,13 +7159,16 @@ div ~ p {
 }
 @media screen and (min-width: 992px) {
   .project-item-images {
+    padding-top: 50px;
+  }
+  .project-item-images > a {
     display: block;
     margin: 10px 0;
   }
-  .project-item-images:first-child {
+  .project-item-images > a:first-child {
     margin-top: 0;
   }
-  .project-item-images:last-child {
+  .project-item-images > a:last-child {
     margin-bottom: 0;
   }
   .project-item-images > a > img {
