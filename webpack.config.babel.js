@@ -16,7 +16,8 @@ const extractLess = new ExtractTextPlugin({
 const config = {
     context: path.resolve(__dirname, 'src'),
     entry: {
-        index: './js/index.js'
+        index: './js/index.js',
+        projects: './js/projects.js'
     },
     output: {
         path: path.resolve(__dirname, 'assets'),
@@ -53,7 +54,8 @@ const config = {
                 }
             },
             include: [
-                path.resolve(__dirname, 'src')
+                path.resolve(__dirname, 'src'),
+                path.resolve(__dirname, 'node_modules/lightbox2/src')
             ]
         }, {
             test: /\.(eot|otf|svg|ttf|woff2?)/,

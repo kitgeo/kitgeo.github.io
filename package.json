@@ -5,13 +5,12 @@
   "main": "index.html",
   "scripts": {
     "start": "jekyll serve",
-    "build": "npm run copy:img && npm run build:assets && npm run build:site",
+    "build": "npm run build:assets && npm run build:site",
     "build:assets": "webpack",
     "build:site": "jekyll build",
-    "copy:img": "copyfiles -u 2 -s \"src/img/**/*\" assets/img",
     "watch:assets": "webpack --watch",
     "clean": "npm run clean:assets && npm run clean:site",
-    "clean:assets": "rimraf assets",
+    "clean:assets": "rimraf assets/css && rimraf assets/css-img && rimraf assets/fonts && rimraf assets/js",
     "clean:site": "rimraf _site",
     "rebuild": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"

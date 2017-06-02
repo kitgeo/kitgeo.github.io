@@ -4,9 +4,8 @@ css: index
 js: index
 ---
 
-<div id="start"></div>
 <div class="start">
-    <div class="wrapper">
+    <div class="start-inner">
         <div class="content">
             <div class="top">
                 {% capture start1 %}{% include start-1.md %}{% endcapture %}
@@ -59,39 +58,35 @@ js: index
     <div class="carousel slide" data-interval="10000" data-pause="false">
 
         <!-- Indicators -->
+        {% assign count = 0 %}
         <ol class="carousel-indicators">
-            <li data-target=".maps-online .carousel" data-slide-to="0" class="active"></li>
-            <li data-target=".maps-online .carousel" data-slide-to="1"></li>
-            <li data-target=".maps-online .carousel" data-slide-to="2"></li>
-            <li data-target=".maps-online .carousel" data-slide-to="3"></li>
-            <li data-target=".maps-online .carousel" data-slide-to="4"></li>
-            <li data-target=".maps-online .carousel" data-slide-to="5"></li>
-            <li data-target=".maps-online .carousel" data-slide-to="6"></li>
+            {% for image in site.static_files %}
+            {% if image.path contains 'assets/img/slideshow' %}
+            {% if count == 0 %}
+            <li data-target=".maps-online .carousel" data-slide-to="{{ count }}" class="active"></li>
+            {% else %}
+            <li data-target=".maps-online .carousel" data-slide-to="{{ count }}"></li>
+            {% endif %}
+            {% assign count = count | plus: 1 %}
+            {% endif %}
+            {% endfor %}
         </ol>
 
         <!-- Wrapper for slides -->
+        {% assign count = 0 %}
         <div class="carousel-inner" role="listbox">
+            {% for image in site.static_files %}
+            {% if image.path contains 'assets/img/slideshow' %}
+            {% if count == 0 %}
             <div class="item active">
-                <img src="assets/img/slideshow-1.jpg" alt="" />
+                {% else %}
+                <div class="item">
+            {% endif %}
+                <img src="{{ image.path }}" alt="" />
             </div>
-            <div class="item">
-                <img src="assets/img/slideshow-2.jpg" alt="" />
-            </div>
-            <div class="item">
-                <img src="assets/img/slideshow-3.jpg" alt="" />
-            </div>
-            <div class="item">
-                <img src="assets/img/slideshow-4.jpg" alt="" />
-            </div>
-            <div class="item">
-                <img src="assets/img/slideshow-5.jpg" alt="" />
-            </div>
-            <div class="item">
-                <img src="assets/img/slideshow-6.jpg" alt="" />
-            </div>
-            <div class="item">
-                <img src="assets/img/slideshow-7.jpg" alt="" />
-            </div>
+            {% assign count = count | plus: 1 %}
+            {% endif %}
+            {% endfor %}
         </div>
 
         <!-- Controls -->

@@ -1,0 +1,40 @@
+<li class="project-item">
+    {% assign projectpath = 'assets/img/projects/' | append: include.name | append: '/' %}
+    {% assign images = '' %}
+
+    {% for image in site.static_files %}
+        {% if image.path contains projectpath %}
+            {% unless image.path contains 'thumb' %}
+                {% if images != '' %}
+                {% assign images = images | append: '|' %}
+                {% endif %}
+                {% assign images = images | append: image.path %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign images = images | remove: projectpath | split: '|' %}
+    <div class="row">
+        {% if images.size > 0 %}
+        <div class="col-md-9">
+        {% else %}
+        <div class="col-md-12">
+        {% endif %}
+            <div class="project-item-description">
+                {% capture description %}{% include projects/{{ include.name }}.md %}{% endcapture %}
+                {{ description | markdownify }}
+            </div>
+        </div>
+        {% if images.size > 0 %}
+        <div class="col-md-3">
+            <div class="project-item-images">
+                {% for image in images %}
+                <a href="{{ projectpath }}{{ image | slice: 1, image.size }}" data-lightbox="{{ include.name }}" data-title="">
+                    <img src="{{ projectpath }}thumb/{{ image | slice: 1, image.size }}" alt="" />
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</li>

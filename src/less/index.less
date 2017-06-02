@@ -1,64 +1,4 @@
-@import "font.less";
-@import "bootstrap.less";
-
-html {
-    min-height: 100%;
-    height: 100%;
-}
-
-body {
-    height: 100%;
-
-    &.loading {
-        position: relative;
-
-        * {
-            display: none;
-        }
-
-        .loader {
-            position: absolute;
-            display: block;
-            top: 40%;
-            left: 50%;
-            margin-top: -64px;
-            margin-left: -64px;
-            width: 128px;
-            height: 128px;
-            background: url('../css-img/loading.gif') no-repeat;
-        }
-    }
-}
-
-.wrapper {
-    max-width: 1880px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.navbar-brand > img {
-    display: inline !important;
-    margin-top: -8px;
-}
-
-.navbar-brand > img ~ span {
-    position: relative;
-    top: -1px;
-    margin: 0 0 0 4px;
-}
-
-.container {
-    &.auto {
-        width: auto;
-    }
-}
-
-.anchor {
-    display: block;
-    position: relative;
-    top: -@navbar-height;
-    visibility: hidden;
-}
+@import "base.less";
 
 .start {
     position: relative;
@@ -75,7 +15,7 @@ body {
         background-image: url('../css-img/start-picture-1280x800.jpg');
     }
 
-    .wrapper {
+    .start-inner {
         position: absolute;
         top: @navbar-height;
         bottom: 0;
@@ -258,17 +198,5 @@ body {
         h1, h2, h3, h4, h5, h6, p, label {
             color: #fff;
         }
-    }
-}
-
-#footer {
-    .text-center;
-
-    @media screen and (min-width: @screen-sm-min) {
-        margin: 50px 0 0;
-    }
-
-    .references {
-        margin: 0 0 40px;
     }
 }

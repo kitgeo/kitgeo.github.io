@@ -1,0 +1,77 @@
+@import "font.less";
+@import "bootstrap.less";
+
+html {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+    &.loading {
+        position: relative;
+
+        * {
+            display: none;
+        }
+
+        .loader {
+            position: absolute;
+            display: block;
+            top: 40%;
+            left: 50%;
+            margin-top: -64px;
+            margin-left: -64px;
+            width: 128px;
+            height: 128px;
+            background: url('../css-img/loading.gif') no-repeat;
+        }
+    }
+}
+
+.wrapper {
+    max-width: 1880px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.navbar-brand > img {
+    display: inline !important;
+    margin-top: -8px;
+}
+
+.navbar-brand > img ~ span {
+    position: relative;
+    top: -1px;
+    margin: 0 0 0 4px;
+}
+
+.navbar-gap {
+    height: @navbar-height
+}
+
+.container {
+    &.auto {
+        width: auto;
+    }
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -@navbar-height;
+    visibility: hidden;
+}
+
+#footer {
+    .text-center;
+
+    @media screen and (min-width: @screen-sm-min) {
+        margin: 50px 0 0;
+    }
+
+    .references {
+        margin: 0 0 40px;
+    }
+}
