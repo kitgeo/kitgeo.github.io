@@ -156,11 +156,11 @@
     
        git clone git@github.com:kitgeo/kitgeo.github.io /path/to/kitgeo 
 
-2. Выбрать для продукта текстовый идентификатор, например, `my-new-project` и создать для него [Markdown](http://daringfireball.net/products/markdown/)-файл
-с описанием `_includes/products/my-new-project.md` в кодировке UTF-8. Для заголовка продукта использовать `###`. Пример
+2. Выбрать для продукта текстовый идентификатор, например, `my-new-product` и создать для него [Markdown](http://daringfireball.net/products/markdown/)-файл
+с описанием `_includes/products/my-new-product.md` в кодировке UTF-8. Для заголовка продукта использовать `###`. Пример
 содержимого файла:
 
-       ### My new project
+       ### My new product
         
        В первом абзаце идёт общее описание продукта...
         
@@ -176,19 +176,19 @@
        <div><iframe ...></iframe></div>
 
 3. Если для продукта есть скриншоты, то их необходимо подготовить в сжатом формате для веба и положить в директорию
-`assets/img/products/my-new-project`. Для детального просмотра размеры изображения должны быть не очень малы, например,
+`assets/img/products/my-new-product`. Для детального просмотра размеры изображения должны быть не очень малы, например,
 1600x900 или 1200x800. Для всех изображений также необходимо подготовить миниатюры и разместить их с идентичными именами
 рядом в поддиректории `thumb`. Подготовку миниатюр легко можно сделать при помощи какого-нибудь онлайн-сервиса,
 например, [Bulk Resize Photos](https://bulkresizephotos.com/). Ширина миниатюр должна быть не менее 400 пикселей.
 
 4. В файле `products.html` добавить подключение шаблона для продукта:
 
-       {% include project-item.html name="my-new-project" %}
+       {% include product-item.html name="my-new-product" %}
 
 5. Добавить сделанные правки в коммит:
 
        git add -A
-       git commit -m "My new project is added."
+       git commit -m "My new product is added."
         
 6. Отправить коммит в удалённый репозиторий в ветку `master`:
 
