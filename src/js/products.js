@@ -3,7 +3,7 @@ import lightbox from 'lightbox2';
 
 import initMenu from './initMenu';
 
-import '../less/projects.less';
+import '../less/products.less';
 
 lightbox.option({
     albumLabel: 'Изображение %1 из %2',

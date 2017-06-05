@@ -20,7 +20,7 @@ js: index
 </div>
 
 <div id="services" class="anchor"></div>
-<div class="services">
+<div class="services index-block">
     <div class="container">
         <div class="general row">
             <div class="col-md-12">
@@ -46,10 +46,24 @@ js: index
     </div>
 </div>
 
+<div id="products" class="anchor"></div>
+<div class="products index-block">
+    <div class="container">
+        <div class="general row">
+            <div class="col-md-12">
+                <h2>Продукты</h2>
+                {% capture products %}{% include products.md %}{% endcapture %}
+                {{ products | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="maps-online" class="anchor"></div>
 <div class="maps-online">
     <div class="container">
         <div class="content">
+            <h2>Карты online</h2>
             {% capture mapsonline %}{% include maps-online.md %}{% endcapture %}
             {{ mapsonline | markdownify }}
         </div>
@@ -102,7 +116,7 @@ js: index
 </div>
 
 <div id="company" class="anchor"></div>
-<div class="company">
+<div class="company index-block">
     <div class="container">
         <div class="general row">
             <div class="col-md-12">

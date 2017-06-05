@@ -17,7 +17,7 @@ const config = {
     context: path.resolve(__dirname, 'src'),
     entry: {
         index: './js/index.js',
-        projects: './js/projects.js'
+        products: './js/products.js'
     },
     output: {
         path: path.resolve(__dirname, 'assets'),

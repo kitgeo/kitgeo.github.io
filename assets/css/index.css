@@ -6972,11 +6972,11 @@ div ~ p {
     padding: 0 20px;
   }
 }
-.services {
+.index-block {
   text-align: center;
   padding: 30px 0 0;
 }
-.services .general {
+.index-block > .general {
   margin: 0 0 30px;
 }
 .maps-online {
@@ -6995,13 +6995,6 @@ div ~ p {
     padding-bottom: 50px;
     visibility: visible;
   }
-}
-.company {
-  text-align: center;
-  padding: 30px 0 0;
-}
-.company .general {
-  margin: 0 0 30px;
 }
 .contacts {
   text-align: center;
